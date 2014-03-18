@@ -6,17 +6,17 @@ script to build lame for iOS
 
 * build fat library for all architectures
 ```
-./lame-ios-build
+./build-lame.sh
 ```
 
 * build libraries for specified architectures
 ```
-./lame-ios-build arm64 x86_64
+./build-lame.sh arm64 x86_64
 ```
 
 * build fat library from thin libraries
 ```
-./lame-ios-build lipo
+./build-lame.sh lipo
 ```
 
 ## Configuration
