@@ -60,7 +60,7 @@ then
 		XCRUN_SDK=`echo $PLATFORM | tr '[:upper:]' '[:lower:]'`
 		CC="xcrun -sdk $XCRUN_SDK clang -arch $ARCH"
 		#AS="$CWD/$SOURCE/extras/gas-preprocessor.pl $CC"
-		CFLAGS="-arch $ARCH $SIMULATOR"
+		CFLAGS="-arch $ARCH $SIMULATOR -fembed-bitcode"
 		CXXFLAGS="$CFLAGS"
 		LDFLAGS="$CFLAGS"
 
