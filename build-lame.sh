@@ -61,6 +61,11 @@ then
 		CC="xcrun -sdk $XCRUN_SDK clang -arch $ARCH"
 		#AS="$CWD/$SOURCE/extras/gas-preprocessor.pl $CC"
 		CFLAGS="-arch $ARCH $SIMULATOR -fembed-bitcode"
+		CFLAGS="-arch $ARCH $SIMULATOR"
+		if ! xcodebuild -version | grep "Xcode [1-6]\."
+		then
+			CFLAGS="$CFLAGS -fembed-bitcode"
+		fi
 		CXXFLAGS="$CFLAGS"
 		LDFLAGS="$CFLAGS"
 
