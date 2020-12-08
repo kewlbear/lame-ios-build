@@ -1,5 +1,7 @@
 # lame-ios-build
 
+See https://github.com/kewlbear/FFmpeg-iOS for .xcframework support, integration with FFmpeg and more.
+
 script to build lame for iOS
 
 ## Usage
